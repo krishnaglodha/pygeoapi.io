@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Home - pygeoapi</title>
+    <title>pygeoapi - an OGC API to geospatial data - pygeoapi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="language" content="en-US">
     <meta name="description" content="pygeoapi provides an API to geospatial data">
@@ -11,7 +11,7 @@
     <link rel="me" href="https://noc.social/@pygeoapi">    
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/mini.css@3.0.1/dist/mini-default.min.css">
-    <link rel="stylesheet" href="https://pygeoapi.io//css/default.css">
+    <link rel="stylesheet" href="https://pygeoapi.io/css/default.css">
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
@@ -24,16 +24,16 @@
       <input type="checkbox" id="drawer-control" class="drawer">
       <nav class="col-sm-12 col-md-12 col-md-offset-1">
         <label for="drawer-control" class="drawer-close"></label>
-        <a href="https://pygeoapi.io/" class="logo hidden-md" role="button">
-          <img src="https://pygeoapi.io//img/pygeoapi-logo.png" title="pygeoapi" style="height:40px;vertical-align: middle;"/></a>
+        <a href="https://pygeoapi.io" class="logo hidden-md" role="button">
+          <img src="https://pygeoapi.io/img/pygeoapi-logo.png" title="pygeoapi" style="height:40px;vertical-align: middle;"/></a>
         <a title="Fork me on GitHub" href="https://github.com/geopython/pygeoapi"><img style="z-index: 1110; position: fixed; top: 0; right: 0; border: 0; padding: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"/></a>
-        <a href="https://pygeoapi.io/">Home</a> <span class='hidden-sm'>|</span>
-        <a href="https://pygeoapi.io//community">Community</a> <span class='hidden-sm'>|</span>
-        <a href="https://pygeoapi.io//documentation">Documentation</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io">Home</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io/community">Community</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io/documentation">Documentation</a> <span class='hidden-sm'>|</span>
         <a href="https://demo.pygeoapi.io">Demo</a> <span class='hidden-sm'>|</span>
         <a href="https://github.com/geopython/pygeoapi">Code</a> <span class='hidden-sm'>|</span>
-        <a href="https://pygeoapi.io//download">Download</a> <span class='hidden-sm'>|</span>
-        <a href="https://pygeoapi.io//development">Development</a>
+        <a href="https://pygeoapi.io/download">Download</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io/development">Development</a>
       </nav>
     </header>
     <main>
@@ -42,33 +42,31 @@
           <div class="col-sm-12 col-md-10 col-md-offset-1">
             <p><img alt="pygeoapi logo" src="img/pygeoapi-logo.png" title="pygeoapi logo" /></p>
 <p><a href="https://zenodo.org/badge/latestdoi/121585259"><img alt="DOI" src="https://zenodo.org/badge/121585259.svg" /></a></p>
-<h4>pygeoapi is a Python server implementation of the <a href="https://ogcapi.ogc.org">OGC API suite of standards</a>. The project emerged as part of the next generation OGC API efforts in 2018 and provides the capability for organizations to deploy a RESTful OGC API endpoint using OpenAPI, GeoJSON, and HTML. pygeoapi is <a href="https://opensource.org">open source</a> and released under an <a href="https://github.com/geopython/pygeoapi/blob/master/LICENSE.md">MIT license</a>.
-
-<br/>
-<a title="Certified OGC Compliant" href="https://www.opengeospatial.org/resource/products/details/?pid=1663"><img alt="Certified OGC Compliant" src="https://portal.ogc.org/public_ogc/compliance/OGC_Certified_Badge.png" width="164" height="64"/></a> <a title="OGC Reference Implementation" href="https://www.opengeospatial.org/resource/products/details/?pid=1663"><img alt="OGC Reference Implementation" src="https://portal.ogc.org/public_ogc/compliance/badge.php?s=ogcapi-features-1 1.0&r=1&n=1)" width="164" height="64"/></a> <a title="OGC Reference Implementation" href="https://www.opengeospatial.org/resource/products/details/?pid=1663"><img alt="OGC Reference Implementation" src="https://portal.ogc.org/public_ogc/compliance/badge.php?s=ogcapi-edr-1 1.0.1&r=1&n=1" width="164" height="64"/></a> <a title="OSGeo Project" href="https://www.osgeo.org/projects/pygeoapi"><img alt="OSGeo Project" src="https://raw.githubusercontent.com/OSGeo/osgeo/master/incubation/project/OSGeo_project.png" width="164" height="64"/></a><a title="FOSS4G Conference" href="https://2023.foss4g.org"><img alt="FOSS4G Conference" width="165" height="65" src="https://2023.foss4g.org/img/logo.png"/></a><a href="https://github.com/geopython/pygeoapi/wiki/Sponsorship"><img alt="Sponsorship" width="147" height="47" src="img/btn_donateCC_LG.gif"/></a>
-
-</h4>
-
-<h2 id="install-in-5-minutes">Install in 5 minutes</h2>
-<pre><code class="language-python">python3 -m venv pygeoapi
-cd pygeoapi
-. bin/activate
-git clone https://github.com/geopython/pygeoapi.git
-cd pygeoapi
-pip3 install -r requirements.txt
-python3 setup.py install
-cp pygeoapi-config.yml example-config.yml
-vi example-config.yml  # edit as required
-export PYGEOAPI_CONFIG=example-config.yml
-export PYGEOAPI_OPENAPI=example-openapi.yml
-pygeoapi openapi generate $PYGEOAPI_CONFIG --output-file $PYGEOAPI_OPENAPI
-pygeoapi serve
-# in another terminal
-curl http://localhost:5000  # or open in a web browser
-</code></pre>
-<h2 id="features">Features</h2>
+<p>pygeoapi is a Python server implementation of the <a href="https://ogcapi.ogc.org">OGC API suite of standards</a>. The project emerged as part of the next generation OGC API efforts in 2018 and provides the capability for organizations to deploy a RESTful OGC API endpoint using OpenAPI, GeoJSON, and HTML. pygeoapi is <a href="https://opensource.org">open source</a> and released under an <a href="https://github.com/geopython/pygeoapi/blob/master/LICENSE.md">MIT license</a>.</p>
+<p><br/>
+<a title="Certified OGC Compliant" href="https://github.com/geopython/pygeoapi/wiki/OGCCompliance"><img alt="Certified OGC Compliant" src="https://portal.ogc.org/public_ogc/compliance/OGC_Certified_Badge.png" width="164" height="64"/></a> <a title="OGC Reference Implementation" href="https://github.com/geopython/pygeoapi/wiki/OGCCompliance"><img alt="OGC Reference Implementation" src="https://portal.ogc.org/public_ogc/compliance/badge.php?s=ogcapi-features-1 1.0&r=1&n=1)" width="164" height="64"/></a> <a title="OGC Reference Implementation" href="https://github.com/geopython/pygeoapi/wiki/OGCCompliance"><img alt="OGC Reference Implementation" src="https://portal.ogc.org/public_ogc/compliance/badge.php?s=ogcapi-edr-1 1.0.1&r=1&n=1" width="164" height="64"/> <a title="OGC Reference Implementation" href="https://github.com/geopython/pygeoapi/wiki/OGCCompliance"><img alt="OGC Reference Implementation" src="https://portal.ogc.org/public_ogc/compliance/badge.php?s=ogcapi-tiles-1%201.0&r=1&n=1" width="164" height="64"/></a>  <a title="OGC Reference Implementation" href="https://github.com/geopython/pygeoapi/wiki/OGCCompliance"><img alt="OGC Reference Implementation" src="https://portal.ogc.org/public_ogc/compliance/badge.php?s=ogcapi-processes-1%201.0&n=1" width="164" height="64"/></a> <a title="OSGeo Project" href="https://www.osgeo.org/projects/pygeoapi"><img alt="OSGeo Project" src="https://raw.githubusercontent.com/OSGeo/osgeo/master/incubation/project/OSGeo_project.png" width="164" height="64"/></a><a title="FOSS4G Conference" href="https://2026.foss4g.org"><img alt="FOSS4G Conference" width="180" height="78" src="img/foss4g-2026.png"/></a><a href="https://github.com/geopython/pygeoapi/wiki/Sponsorship"><img alt="Sponsorship" width="147" height="47" src="img/btn_donateCC_LG.gif"/></a></p>
+<hr />
+<h2 id="install-in-5-minutes">Install in 5 minutes<a class="headerlink" href="#install-in-5-minutes" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Python 3.12 recommended</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>.<span class="w"> </span>venv/bin/activate
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/geopython/pygeoapi.git
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">cd</span><span class="w"> </span>pygeoapi
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>pip3<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>pip3<span class="w"> </span>install<span class="w"> </span>.
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>cp<span class="w"> </span>pygeoapi-config.yml<span class="w"> </span>example-config.yml
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>vi<span class="w"> </span>example-config.yml<span class="w">  </span><span class="c1"># edit as required</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PYGEOAPI_CONFIG</span><span class="o">=</span>example-config.yml
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PYGEOAPI_OPENAPI</span><span class="o">=</span>example-openapi.yml
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>pygeoapi<span class="w"> </span>openapi<span class="w"> </span>generate<span class="w"> </span><span class="nv">$PYGEOAPI_CONFIG</span><span class="w"> </span>--output-file<span class="w"> </span><span class="nv">$PYGEOAPI_OPENAPI</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>pygeoapi<span class="w"> </span>serve
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1"># in another terminal</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>curl<span class="w"> </span>http://localhost:5000<span class="w">  </span><span class="c1"># or open in a web browser</span>
+</span></code></pre></div>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <p>At a glance:</p>
 <ul>
+<li>OGC Compliant: pygeoapi is certified <a href="https://github.com/geopython/pygeoapi/wiki/OGCCompliance">OGC Compliant and an OGC Reference Implementation</a></li>
 <li>Easy to install: install a full implementation via pip or git</li>
 <li>Easy to deploy: via UbuntuGIS or the official Docker image</li>
 <li>Flexible: built on a robust plugin framework<ul>
@@ -78,7 +76,6 @@ curl http://localhost:5000  # or open in a web browser
 <li>deploy via Flask, Django, or any Python framework</li>
 </ul>
 </li>
-<li>OGC Compliant: pygeoapi is certified <a href="https://www.opengeospatial.org/resource/products/details/?pid=1663">OGC Compliant and an OGC Reference Implementation</a></li>
 </ul>
           </div>
         </div>
@@ -86,9 +83,9 @@ curl http://localhost:5000  # or open in a web browser
     </main>
     <footer style="text-align: center;">
       <a rel="license" title="This work is licensed under a Creative Commons Attribution 4.0 International License" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
-      &copy; 2019 - 2023 Tom Kralidis
+      © 2019 - 2026 pygeoapi development team
       <a title="Open Hub project report for pygeoapi" href="https://www.openhub.net/p/pygeoapi"><img src="https://www.openhub.net/p/pygeoapi/widgets/project_thin_badge.gif"/></a>
-      <br/>Powered by <a href="https://www.mkdocs.org/">MkDocs</a>
+      <br/>Powered by <a href="https://zensical.org/">Zensical</a>
     </footer>
   </body>
 </html>
